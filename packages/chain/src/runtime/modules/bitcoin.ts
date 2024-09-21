@@ -6,7 +6,7 @@ import {
 } from "@proto-kit/module";
 import { State, StateMap, assert } from "@proto-kit/protocol";
 import { UInt64, Balance, Balances, TokenId } from "@proto-kit/library";
-import { Field, PublicKey, Struct, Bool, Provable, Bytes } from "o1js";
+import { Field, PublicKey, Struct, Bool, Provable, CircuitString } from "o1js";
 
 interface BitcoinConfig {}
 
@@ -28,7 +28,7 @@ export class Bitcoin extends RuntimeModule<BitcoinConfig> {
     @state() public wallets = StateMap.from<UInt64, Wallet>(UInt64, Wallet);
 
     @runtimeMethod()
-    public async link(id: UInt64, sig: Bytes): Promise<void> {
+    public async link(id: UInt64, sig: CircuitString): Promise<void> {
         const wExists = await this.wallets.get(id);
         assert(
             wExists.isSome.and(wExists.value.notRemoved).not(),
