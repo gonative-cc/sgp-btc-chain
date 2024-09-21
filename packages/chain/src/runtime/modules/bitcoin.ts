@@ -49,10 +49,7 @@ export class Bitcoin extends RuntimeModule<BitcoinConfig> {
     @runtimeMethod()
     public async unlink(id: UInt64): Promise<void> {
         const wOpt = await this.wallets.get(id);
-        assert(
-            wOpt.isSome.and(wOpt.value.notRemoved.not()),
-            "wallet is not linked",
-        );
+        assert(wOpt.isSome.and(wOpt.value.notRemoved), "wallet is not linked");
         const sender = this.transaction.sender.value;
         const w = wOpt.value;
         assert(w.owner.equals(sender), errNotOnwer);
