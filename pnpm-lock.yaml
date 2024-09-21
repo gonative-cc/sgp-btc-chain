@@ -190,6 +190,9 @@ importers:
 
   packages/chain:
     dependencies:
+      '@noble/secp256k1':
+        specifier: ^2.1.0
+        version: 2.1.0
       '@proto-kit/api':
         specifier: '*'
         version: 0.1.1-develop.833(tdl2jvgpdktg37cijcy3bniih4)
@@ -839,6 +842,9 @@ packages:
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
+
+  '@noble/secp256k1@2.1.0':
+    resolution: {integrity: sha512-XLEQQNdablO0XZOIniFQimiXsZDNwaYgL96dZwC54Q30imSbAOFf3NKtepc+cXyuZf5Q1HCgbqgZ2UFFuHVcEw==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -5209,6 +5215,8 @@ snapshots:
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
       eslint-scope: 5.1.1
+
+  '@noble/secp256k1@2.1.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

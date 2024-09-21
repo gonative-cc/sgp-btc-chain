@@ -8,6 +8,8 @@ import { State, StateMap, assert } from "@proto-kit/protocol";
 import { UInt64, Balance, Balances, TokenId } from "@proto-kit/library";
 import { Field, PublicKey, Struct, Bool, Provable, CircuitString } from "o1js";
 
+import * as secp from "@noble/secp256k1";
+
 interface BitcoinConfig {}
 
 const keyBridge = PublicKey.from({ x: 1n, isOdd: false });
@@ -40,8 +42,10 @@ export class Bitcoin extends RuntimeModule<BitcoinConfig> {
         await this.wallets.set(id, w);
 
         Provable.asProver(() => {
-            // TODO: prove signature
-            // example: use Provable to do some logic that is not natively provable
+            const pubkey = this.transaction.sender.value;
+            // we use Provable to do some logic that is not natively provable
+            // prove signature
+            const isValid = secp.verify(sig.toString(), id.toString(), pubkey);
         });
     }
 
