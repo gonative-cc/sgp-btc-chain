@@ -12,7 +12,7 @@ interface BitcoinConfig {}
 
 const keyBridge = PublicKey.from({ x: 1n, isOdd: false });
 
-const errNotOnwer = "wallet no owned by sender";
+const errNotOnwer = "wallet not owned by sender";
 
 export class Wallet extends Struct({
     owner: PublicKey,
