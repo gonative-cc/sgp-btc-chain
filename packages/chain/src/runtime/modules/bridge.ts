@@ -37,6 +37,16 @@ export class Bitcoin extends RuntimeModule {
         recipientAddress: CircuitString, // bytes32
         messageBody: CircuitString, // bytes32
     ): Promise<CircuitString> {
+        let nonce = (await this.nonce.get()).value.add(1);
+        await this.nonce.set(nonce);
+
+        const msg = new Msg({
+            destinationDomain,
+            recipientAddress,
+            messageBody,
+        });
+        await this.msgs.set(nonce, msg);
+
         return CircuitString.fromString("");
     }
 
@@ -44,5 +54,8 @@ export class Bitcoin extends RuntimeModule {
     public async process(
         metadata: CircuitString,
         message: CircuitString,
-    ): Promise<void> {}
+    ): Promise<void> {
+
+
+    }
 }

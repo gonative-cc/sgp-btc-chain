@@ -42,7 +42,6 @@ export class Bitcoin extends RuntimeModule<BitcoinConfig> {
         Provable.asProver(() => {
             // TODO: prove signature
             // example: use Provable to do some logic that is not natively provable
-            const mynumber = 3;
         });
     }
 
