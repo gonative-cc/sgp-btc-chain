@@ -150,7 +150,7 @@ function NFTItems() {
         <div key={wallet.walletId} className="mb-10">
           {/* Wallet title and Buy button */}
           <div className="flex justify-between mt-10 gap-6">
-            <p className="text-3xl text-white font-medium">{wallet.walletName} - {wallet.totalAmount}</p>
+            <p className="text-3xl text-black font-medium">{wallet.walletName} - {wallet.totalAmount}</p>
             <button
               onClick={() => window.location.href = '/allnft'}
               className="bg-[#00a3ff] hover:bg-[#212e48] text-white rounded-md w-40 duration-300"
