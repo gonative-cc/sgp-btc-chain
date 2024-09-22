@@ -6,6 +6,13 @@ Combining a non-collusive MPC network with a Zero Knowledge Appchain powered by 
 
 *Zero Trust* describes an approach to the strategy, design and implementation of IT systems. The main concept behind the zero trust security model is "never trust, always verify", which means that users and devices should not be trusted by default, even if they are connected to a permissioned network such as a corporate LAN and even if they were previously verified.
 
+## Hackathon Demo
+
+* [**Problem statement, User Journey and Presentation**](https://hackmd.io/@robert-zaremba/SyAVLk6aC)
+* Demonstration of using the MPC wallet secured by ZK Rollup:
+  * [Linea Marketplace and bridge contract](https://github.com/gonative-cc/sgp-btc-evm/tree/master/solidity)
+  * [Marketplace UI](https://github.com/gonative-cc/sgp-btc-evm/tree/master/UI)
+
 
 ## Quick start
 
