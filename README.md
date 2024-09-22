@@ -12,14 +12,14 @@ Combining a non-collusive MPC network with a Zero Knowledge Appchain powered by 
 * Demonstration of using the MPC wallet secured by ZK Rollup:
   * [Linea Marketplace and bridge contract](https://github.com/gonative-cc/sgp-btc-evm/tree/master/solidity)
   * [Marketplace UI](https://github.com/gonative-cc/sgp-btc-evm/tree/master/UI)
-
+  * [Bridge UI] -> `apps/web`
 
 ## Quick start
 
 The monorepo contains 1 package and 1 app:
 
 - `packages/chain` contains everything related to your app-chain
-- `apps/web` contains a demo UI that connects to your locally hosted app-chain sequencer
+- `apps/web` contains a demo UI for a Bridge
 
 **Prerequisites:**
 
